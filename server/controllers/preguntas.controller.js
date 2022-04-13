@@ -26,4 +26,9 @@ preguntaCtrl.updatePregunta = async(req, res) => {
     res.json({ res: "Pregunta Actualizada" });
 }
 
+preguntaCtrl.getPregunta = async(req, res) => {
+    const find = await transicion.find({ '': req.params.vehiculoId });
+    res.json(find);
+};
+
 module.exports = preguntaCtrl;

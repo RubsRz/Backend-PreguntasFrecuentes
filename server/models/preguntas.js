@@ -6,7 +6,6 @@ const PreguntaSchema = new Schema({
     respuesta: { type : String },
     edificio: { type : String },
     estado: { type : Boolean }
-
 });
 
 module.exports = mongoose.model('Preguntas', PreguntaSchema, 'preguntas');
