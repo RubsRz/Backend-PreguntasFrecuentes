@@ -5,11 +5,13 @@ const preguntaCtrl = require('../controllers/preguntas.controller');
 
 router.get('/getPreguntas', preguntaCtrl.getPreguntas);
 
+// router.get('/getPregunta/:id',contactCtrl.getPregunta);
+
 router.post('/addPregunta', preguntaCtrl.addPregunta);
 
+router.post('/updatePregunta', preguntaCtrl.updatePregunta);
 
 
-// router.get('/:id',contactCtrl.getContact);
 
 // router.put('/:id',contactCtrl.editCotact);
 

@@ -11,7 +11,7 @@ preguntaCtrl.addPregunta = async (req,res) => {
     const newPregunta = new pregunta({
         pregunta: req.body.pregunta,
         respuesta: req.body.respuesta,
-        edificio: req.body.edifcio,
+        edificio: req.body.edificio,
         estado: req.body.estado
     });
     await newPregunta.save();
@@ -19,5 +19,11 @@ preguntaCtrl.addPregunta = async (req,res) => {
        'status' : 'Pregunta saved'
     });
 };
+
+preguntaCtrl.updatePregunta = async(req, res) => {
+    let body = req.body;
+    await pregunta.findByIdAndUpdate(body.id, { $set: { estado: body.estado } })
+    res.json({ res: "Pregunta Actualizada" });
+}
 
 module.exports = preguntaCtrl;
