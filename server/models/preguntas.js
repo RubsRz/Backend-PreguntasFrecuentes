@@ -5,7 +5,7 @@ const PreguntaSchema = new Schema({
     pregunta: { type: String, required: true },
     respuesta: { type : String },
     edificio: { type : String },
-    estado: { type : String }
+    estado: { type : Boolean }
 
 });
 
